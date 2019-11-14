@@ -41,6 +41,8 @@
         $.ajax(options).done(function(res){
             // should get back the access token and the patient ID
             var accessToken = res.access_token;
+            document.write('accessToken: ' + res.access_token);
+            document.write('serviceUri: ' + serviceUri);
             var patientId = res.patient;
                     
             // and now we can use these to construct standard FHIR
