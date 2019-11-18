@@ -45,7 +45,7 @@
             document.write('accessToken: ' + res.access_token + '\n');
             document.write('serviceUri: ' + serviceUri + '\n');
             var patientId = res.patient;
-          document.write('patientId: ' + patientId + '\n');
+            document.write('patientId: ' + patientId + '\n');
                     
             // and now we can use these to construct standard FHIR
             // REST calls to obtain patient resources with the
@@ -64,6 +64,9 @@
                 var name = pt.name[0].given.join(" ") +" "+ pt.name[0].family.join(" ");
                 document.body.innerHTML += "<h3>Patient: " + name + "</h3>";
             });
+          
+          document.write('launch: ' + getUrlParameter("launch"); + '\n');
+          
         });
         
         // Convenience function for parsing of URL parameters
