@@ -9,6 +9,7 @@
         // get the URL parameters received from the authorization server
         var state = getUrlParameter("state");  // session key
         var code = getUrlParameter("code");    // authorization code
+        var launch = getUrlParameter("launch");
         
         // load the app parameters stored in the session
         var params = JSON.parse(sessionStorage[state]);  // load app session
@@ -46,6 +47,7 @@
             document.write('serviceUri: ' + serviceUri + '\n');
             var patientId = res.patient;
             document.write('patientId: ' + patientId + '\n');
+            document.write('launch: ' + launch + '\n');
                     
             // and now we can use these to construct standard FHIR
             // REST calls to obtain patient resources with the
