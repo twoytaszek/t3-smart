@@ -76,6 +76,7 @@
             });
             
             // retain a couple parameters in the session for later use
+            window.alert("tokenUri: " + tokenUri + "\n");
             sessionStorage[state] = JSON.stringify({
                 clientId: clientId,
                 secret: secret,
