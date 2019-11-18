@@ -61,8 +61,11 @@
                     "Authorization": "Bearer " + accessToken
                 },
             }).done(function(pt){
+                for (var prop in pt) {
+                  document.write(prop + '\n');
+                }
                 var name = pt.name[0].given.join(" ") +" "+ pt.name[0].family.join(" ");
-                var location = pt.location.location;
+                var location = pt.location;
                 document.body.innerHTML += "<h3>Patient: " + name + "</h3> <h3>Location: " + location + "</h3>";
             });
         });
