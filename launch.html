@@ -49,6 +49,7 @@
         // current URL and replace "launch.html" with "index.html".
         var launchUri = window.location.protocol + "//" + window.location.host + window.location.pathname;
         var redirectUri = launchUri.replace("launch.html","");
+        window.alert("redirectUri: " + redirectUri );
         
         // FHIR Service Conformance Statement URL
         var conformanceUri = serviceUri + "/metadata"
