@@ -79,7 +79,7 @@
                 document.body.innerHTML += "<h3>Patient: " + name + "</h3> <h3>Location: " + location + "</h3>";
             });
           
-          serviceUri + "/Encounter/" + patientId ;
+            url = serviceUri + "/Encounter/" + patientId ;
             $.ajax({
                 url: url,
                 type: "GET",
@@ -89,8 +89,7 @@
                 },
             }).done(function(l){
                 for (var prop in l) {
-                  window.alert(prop);
-                  //document.write(prop + '\n');
+                  //window.alert(prop);
                 }
                 //var name = pt.name[0].given.join(" ") +" "+ pt.name[0].family.join(" ");
                 //document.body.innerHTML += "<h3>Patient: " + name + "</h3> <h3>Location: " + location + "</h3>";
