@@ -65,7 +65,19 @@
                 document.body.innerHTML += "<h3>Patient: " + name + "</h3>";
             });
           
-          document.write('launch: ' + getUrlParameter("launchContextId") + '\n');
+            url = serviceUri + "/launch/" + patientId;
+            $.ajax({
+                url: url,
+                type: "GET",
+                dataType: "json",
+                headers: {
+                    "Authorization": "Bearer " + accessToken
+                },
+            }).done(function(pt){
+                //var name = pt.name[0].given.join(" ") +" "+ pt.name[0].family.join(" ");
+                document.body.innerHTML += "<h3>launch: " + pt + "</h3>";
+            });
+          
           
         });
         
