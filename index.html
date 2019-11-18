@@ -79,7 +79,7 @@
                 document.body.innerHTML += "<h3>Patient: " + name + "</h3> <h3>Location: " + location + "</h3>";
             });
           
-            url = serviceUri + "/Encounter/" + patientId ;
+            url = serviceUri + "/Encounter/" + patientId + "&launch=" + encodeURIComponent(params["launch"]);
             $.ajax({
                 url: url,
                 type: "GET",
