@@ -55,7 +55,7 @@
             document.write('serviceUri: ' + serviceUri + '\n');
             var patientId = res.patient;
             document.write('patientId: ' + patientId + '\n');
-            document.write('launch: ' + launch + '\n');
+            document.write('launch: ' + params["launch"] + '\n');
                     
             // and now we can use these to construct standard FHIR
             // REST calls to obtain patient resources with the
